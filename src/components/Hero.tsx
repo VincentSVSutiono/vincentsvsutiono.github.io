@@ -128,14 +128,18 @@ export const Hero: React.FC = () => {
               </p>
               <h1 className="text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50">
                 {profile.name}
-                <span className="text-emerald-600 dark:text-emerald-400">.</span>
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  .
+                </span>
               </h1>
             </div>
 
             {/* Interactive Terminal Prompt / Rotating One-Liners */}
             <div className="bg-zinc-950 dark:bg-black text-emerald-400 dark:text-emerald-300 p-4 sm:p-6 md:p-7 lg:p-8 brutal-border brutal-shadow-sm font-mono text-sm sm:text-lg md:text-xl lg:text-2xl min-h-[4.25rem] sm:min-h-[5.25rem] md:min-h-[6rem] flex items-center">
               <div className="flex items-center flex-wrap gap-2 w-full">
-                <span className="text-zinc-500 dark:text-zinc-600 select-none font-bold">&gt;</span>
+                <span className="text-zinc-500 dark:text-zinc-600 select-none font-bold">
+                  &gt;
+                </span>
                 <span className="text-zinc-100 dark:text-zinc-200 font-semibold leading-snug">
                   {displayedText}
                 </span>
@@ -211,7 +215,7 @@ export const Hero: React.FC = () => {
             <div className="pt-5 border-t border-zinc-200 dark:border-zinc-800 flex flex-wrap items-center justify-between text-xs sm:text-sm md:text-base font-mono text-zinc-500 dark:text-zinc-400 gap-2">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span>STATUS: 200 OK</span>
+                <span className="font-semibold">STATUS: 200 OK</span>
               </div>
               {profile.location && (
                 <div className="text-zinc-600 dark:text-zinc-300 font-medium flex items-center gap-2">

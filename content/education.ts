@@ -17,17 +17,31 @@ export interface EducationEntry {
 export const education: EducationEntry[] = [
   {
     id: "edu-1",
-    title: "Placeholder Milestone One",
-    institution: "Institution Name",
-    subtitle: "Degree or Program Name",
-    dateRange: "20XX - 20XX",
-    description: "Placeholder description of this stage of your journey.",
+    title: "Undergraduate in Computer Engineering",
+    institution: "Multimedia Nusantara University",
+    institutionUrl:
+      "https://www.umn.ac.id/en/universitas-multimedia-nusantara/",
+    subtitle: "Bachelor of Computer Engineering",
+    dateRange: "2022 — Present",
+    description:
+      "Focusing on hardware-software co-design, full-stack web architectures, electronics, and intelligent systems. Gaining comprehensive practical experience in transforming theoretical principles into deployed technological solutions.",
   },
   {
     id: "edu-2",
-    title: "Placeholder Milestone Two",
-    subtitle: "A pivot, self-taught phase, bootcamp, etc.",
-    dateRange: "20XX - 20XX",
-    description: "Placeholder description.",
+    title: "Self-Directed Technical Specialization",
+    institution: "Autonomous Engineering & Practical Systems",
+    subtitle: "Full-Stack Development & Machine Learning",
+    dateRange: "2022 — Present",
+    description:
+      "Dedicated to continuous deep-dive learning into modern web application stacks, automated toolchains, microcontroller interfacing, and applied machine learning models.",
+  },
+  {
+    id: "edu-3",
+    title: "Vocational School Student",
+    institution: "Vocational High School 2 Tangerang",
+    subtitle: "Computer and Network Engineering",
+    dateRange: "2019 - 2022",
+    description:
+      "Focusing on hardware-software co-design, full-stack web architectures, electronics, and intelligent systems. Gaining comprehensive practical experience in transforming theoretical principles into deployed technological solutions.",
   },
 ];
