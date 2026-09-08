@@ -11,6 +11,8 @@
     --card-bg: #ffffff;
     --text-main: #18181b;
     --text-muted: #52525b;
+    --accent-emerald: #10b981;
+    --accent-gold: #d97706;
   }
 
   .dark {
@@ -21,6 +23,9 @@
     --card-bg: #14151a;
     --text-main: #f4f4f5;
     --text-muted: #a1a1aa;
+    --accent-emerald: #10b981;
+    --accent-gold: #fbbf24;
+    --accent-gold-subtle: rgba(251, 191, 36, 0.12);
   }
 
   body {
