@@ -3,6 +3,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Skills } from './components/Skills';
 
 export const App: React.FC = () => {
   return (
@@ -19,11 +20,11 @@ export const App: React.FC = () => {
           {/* Section 2: About (including Education & Growth timeline) */}
           <About />
 
+          {/* Section 3: Skills (My Tech Stack) */}
+          <Skills />
+
           {/* Scaffolding Anchor Targets for Subsequent Sections */}
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-20 opacity-40">
-            <section id="skills" className="py-12 border-t brutal-border border-dashed">
-              <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">// Section 3: Skills (Pending)</p>
-            </section>
             <section id="experience" className="py-12 border-t brutal-border border-dashed">
               <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">// Section 4: Experience (Pending)</p>
             </section>

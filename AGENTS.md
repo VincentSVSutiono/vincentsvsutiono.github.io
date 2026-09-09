@@ -39,6 +39,13 @@ Hero, About, Skills, Experience, Projects, Contact. Static site, no backend.
   system (§5.2) so Navbar, About, Skills, Experience, Projects, and Contact
   all inherit it. Do not revert toward the reference's original colors in
   later sections.
+- **Subtitles and copy must be catered to the owner, never copied from the
+  reference** — zayarshein.com has section subtitles and narrative copy
+  specific to Zayar's personal background (e.g. transitioning from medicine
+  to tech: "the unconventional path"). Vincent has always been in Computer
+  Engineering. Never copy or adapt Zayar's personalized section subtitles or
+  biographical phrases. All subtitles and copy must be genuine to Vincent's
+  engineering journey or clean, general professional descriptors.
 
 ## 2. Tech stack (do not deviate without asking)
 
@@ -235,6 +242,7 @@ Vite needs explicit config for GitHub Pages — don't assume default settings wo
 
 - Never hardcode personal content (bio, job history, project details) inside
   a component — see §4.
+- Never copy/paste biographical subtitles, taglines, or narrative phrases from the reference site (e.g. "unconventional path").
 - Never add a contact form, backend, database, or auth.
 - Never introduce Next.js, a CMS, or SSR "for future-proofing" unless the
   owner explicitly asks — this project is intentionally static and simple.

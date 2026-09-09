@@ -62,8 +62,7 @@ export const About: React.FC = () => {
           {/* Underline bar: gold yellow in dark mode */}
           <div className="h-1 w-12 sm:h-1.5 sm:w-14 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
           <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
-            An unconventional path — transforming theoretical foundations into
-            intelligent, real-world engineering solutions.
+            Academic foundation &amp; continuous learning — bridging computer engineering theory with real-world systems.
           </p>
         </div>
 
