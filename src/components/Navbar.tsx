@@ -58,7 +58,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#faf9f6]/95 dark:bg-[#0c0d10]/95 backdrop-blur-md border-b-2 border-zinc-900 dark:border-zinc-800 transition-colors duration-200">
-      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12 h-16 sm:h-20 flex items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-10 h-14 sm:h-16 flex items-center justify-between gap-4">
         {/* Left Side: Brand Logo */}
         <a
           href="#hero"
@@ -66,88 +66,88 @@ export const Navbar: React.FC = () => {
             e.preventDefault();
             handleLinkClick("#hero");
           }}
-          className="group flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-black brutal-btn select-none overflow-hidden"
+          className="group flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-white dark:bg-black brutal-btn select-none overflow-hidden"
           aria-label="Vincent Sutiono — Home"
           id="navbar-brand-logo"
         >
           <img
             src="./Logo.svg"
             alt="VS Logo"
-            className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform duration-200 group-hover:scale-110 dark:invert"
+            className="w-6 h-6 sm:w-7 sm:h-7 object-contain transition-transform duration-200 group-hover:scale-110 dark:invert"
           />
         </a>
 
         {/* Right Side: Desktop Nav Links + Controls */}
-        <div className="flex items-center gap-3 sm:gap-6">
+        <div className="flex items-center gap-2 sm:gap-4">
           {/* Desktop Navigation Links (Visible on Large Screens >= 1024px) */}
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
-          {navItems.map((item) => {
-            const isActive = activeSection === item.href.replace("#", "");
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleLinkClick(item.href);
-                }}
-                className={`font-mono text-sm xl:text-base font-bold tracking-wider px-3.5 py-2 xl:px-4 xl:py-2.5 transition-all duration-150 select-none ${
-                  isActive
-                    ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 brutal-shadow-sm"
-                    : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-200/70 dark:hover:bg-zinc-800/70"
-                }`}
-              >
-                {item.label}
-              </a>
-            );
-          })}
-        </nav>
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
+            {navItems.map((item) => {
+              const isActive = activeSection === item.href.replace("#", "");
+              return (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleLinkClick(item.href);
+                  }}
+                  className={`font-mono text-xs sm:text-sm font-bold tracking-wider px-3 py-1.5 sm:px-3.5 sm:py-2 transition-all duration-150 select-none ${
+                    isActive
+                      ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 brutal-shadow-sm"
+                      : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:white hover:bg-zinc-200/70 dark:hover:bg-zinc-800/70"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </nav>
 
-        {/* Right Action Controls: Theme Toggle + Tablet/Mobile Hamburger Trigger */}
-        <div className="flex items-center gap-2 sm:gap-3">
-          {/* Light / Dark Mode Toggle Button */}
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center cursor-pointer transition-transform"
-            aria-label="Toggle light/dark theme"
-            id="theme-toggle-btn"
-          >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-amber-400 transition-transform rotate-0 hover:rotate-45" />
-            ) : (
-              <Moon className="w-5 h-5 text-zinc-800 transition-transform -rotate-12 hover:rotate-0" />
-            )}
-          </button>
+          {/* Right Action Controls: Theme Toggle + Tablet/Mobile Hamburger Trigger */}
+          <div className="flex items-center gap-2">
+            {/* Light / Dark Mode Toggle Button */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="w-9 h-9 sm:w-10 sm:h-10 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center cursor-pointer transition-transform"
+              aria-label="Toggle light/dark theme"
+              id="theme-toggle-btn"
+            >
+              {theme === "dark" ? (
+                <Sun className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-amber-400 transition-transform rotate-0 hover:rotate-45" />
+              ) : (
+                <Moon className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-zinc-800 transition-transform -rotate-12 hover:rotate-0" />
+              )}
+            </button>
 
-          {/* Tablet & Mobile Drawer Trigger with Icon Crossfade Animation */}
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            className="lg:hidden w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center cursor-pointer transition-transform active:scale-95"
-            aria-label={
-              mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
-            }
-            id="mobile-menu-toggle-btn"
-          >
-            <div className="relative w-5 h-5 flex items-center justify-center">
-              <Menu
-                className={`w-5 h-5 absolute transition-all duration-300 transform ${
-                  mobileMenuOpen
-                    ? "opacity-0 rotate-90 scale-75"
-                    : "opacity-100 rotate-0 scale-100"
-                }`}
-              />
-              <X
-                className={`w-5 h-5 absolute transition-all duration-300 transform ${
-                  mobileMenuOpen
-                    ? "opacity-100 rotate-0 scale-100"
-                    : "opacity-0 -rotate-90 scale-75"
-                }`}
-              />
-            </div>
-          </button>
-        </div>
+            {/* Tablet & Mobile Drawer Trigger with Icon Crossfade Animation */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center cursor-pointer transition-transform active:scale-95"
+              aria-label={
+                mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+              }
+              id="mobile-menu-toggle-btn"
+            >
+              <div className="relative w-4.5 h-4.5 sm:w-5 sm:h-5 flex items-center justify-center">
+                <Menu
+                  className={`w-4.5 h-4.5 sm:w-5 sm:h-5 absolute transition-all duration-300 transform ${
+                    mobileMenuOpen
+                      ? "opacity-0 rotate-90 scale-75"
+                      : "opacity-100 rotate-0 scale-100"
+                  }`}
+                />
+                <X
+                  className={`w-4.5 h-4.5 sm:w-5 sm:h-5 absolute transition-all duration-300 transform ${
+                    mobileMenuOpen
+                      ? "opacity-100 rotate-0 scale-100"
+                      : "opacity-0 -rotate-90 scale-75"
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 
