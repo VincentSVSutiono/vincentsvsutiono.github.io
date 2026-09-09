@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
+import { Contact } from './components/Contact';
 
 export const App: React.FC = () => {
   return (
@@ -27,15 +28,15 @@ export const App: React.FC = () => {
           {/* Section 4: Experience */}
           <Experience />
 
-          {/* Scaffolding Anchor Targets for Subsequent Sections */}
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-20 opacity-40">
-            <section id="projects" className="py-12 border-t brutal-border border-dashed">
-              <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">// Section 5: Projects (Pending)</p>
-            </section>
-            <section id="contact" className="py-12 border-t brutal-border border-dashed">
-              <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">// Section 6: Contact (Pending)</p>
+          {/* Scaffolding Anchor Target for Section 6: Projects (Saved for last) */}
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 opacity-40">
+            <section id="projects" className="py-12 border-t brutal-border border-dashed text-center">
+              <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">// Section 6: Projects (Saved for last)</p>
             </section>
           </div>
+
+          {/* Section 7: Contact */}
+          <Contact />
         </main>
 
         {/* Footer */}
