@@ -58,9 +58,29 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[#faf9f6]/95 dark:bg-[#0c0d10]/95 backdrop-blur-md border-b-2 border-zinc-900 dark:border-zinc-800 transition-colors duration-200">
-      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12 h-16 sm:h-20 flex items-center justify-end gap-3 sm:gap-6">
-        {/* Desktop Navigation Links (Visible on Large Screens >= 1024px) */}
-        <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12 h-16 sm:h-20 flex items-center justify-between gap-4">
+        {/* Left Side: Brand Logo */}
+        <a
+          href="#hero"
+          onClick={(e) => {
+            e.preventDefault();
+            handleLinkClick("#hero");
+          }}
+          className="group flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-black brutal-btn select-none overflow-hidden"
+          aria-label="Vincent Sutiono — Home"
+          id="navbar-brand-logo"
+        >
+          <img
+            src="./Logo.svg"
+            alt="VS Logo"
+            className="w-7 h-7 sm:w-8 sm:h-8 object-contain transition-transform duration-200 group-hover:scale-110 dark:invert"
+          />
+        </a>
+
+        {/* Right Side: Desktop Nav Links + Controls */}
+        <div className="flex items-center gap-3 sm:gap-6">
+          {/* Desktop Navigation Links (Visible on Large Screens >= 1024px) */}
+          <nav className="hidden lg:flex items-center gap-2 xl:gap-3">
           {navItems.map((item) => {
             const isActive = activeSection === item.href.replace("#", "");
             return (
@@ -127,6 +147,7 @@ export const Navbar: React.FC = () => {
               />
             </div>
           </button>
+        </div>
         </div>
       </div>
 
