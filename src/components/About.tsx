@@ -62,7 +62,8 @@ export const About: React.FC = () => {
           {/* Underline bar: gold yellow in dark mode */}
           <div className="h-1 w-12 sm:h-1.5 sm:w-14 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
           <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
-            Academic foundation &amp; continuous learning — bridging computer engineering theory with real-world systems.
+            Academic foundation &amp; continuous learning — bridging computer
+            engineering theory with real-world systems.
           </p>
         </div>
 
@@ -124,10 +125,12 @@ export const About: React.FC = () => {
                             href={item.institutionUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group inline-flex items-center gap-1.5 font-bold text-sm sm:text-base text-zinc-900 dark:text-zinc-100 hover:underline underline-offset-4 cursor-pointer"
+                            className="group inline-flex items-center gap-1.5 font-bold text-sm sm:text-base text-zinc-900 dark:text-zinc-100 cursor-pointer"
                             title="Visit Website"
                           >
-                            <span>{item.institution}</span>
+                            <span className="gold-hover-link">
+                              {item.institution}
+                            </span>
                             <ArrowUpRight className="w-4 h-4 text-zinc-700 dark:text-amber-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                           </a>
                         ) : (

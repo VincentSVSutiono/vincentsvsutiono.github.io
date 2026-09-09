@@ -12,11 +12,10 @@
 export interface ExperienceEntry {
   id: string; // unique, used for React keys — e.g. "exp-1"
   role: string; // e.g. "Full-Stack Developer (Contract)"
-  company: string; // e.g. "Company Name"
-  companyNote?: string; // e.g. "(in collab. with Partner Co.)"
+  company: string; // e.g. "Company Name" (can include note directly if needed)
   companyUrl?: string; // if the role/company should link out
   dateRange: string; // e.g. "2026 April - Present"
-  description: string;
+  description: string[]; // bullet points of responsibilities and impact
   tags?: string[]; // tools/tech used, shown as chips — omit or leave empty if none
 }
 
@@ -27,16 +26,23 @@ export const experience: ExperienceEntry[] = [
     role: "Placeholder Role One",
     company: "Placeholder Company",
     dateRange: "20XX - Present",
-    description: "Placeholder description of responsibilities and impact in this role.",
-    tags: ["Tool One", "Tool Two"],
+    description: [
+      "Engineered full-stack features and integrated intelligent system modules to improve workflow efficiency.",
+      "Collaborated across cross-functional teams to design, test, and deploy robust web applications.",
+      "Optimized system performance, code quality, and maintainability across core services."
+    ],
+    tags: ["TypeScript", "React.js", "Node.js", "TailwindCSS"],
   },
   {
     id: "exp-2",
     role: "Placeholder Role Two",
-    company: "Placeholder Company",
-    companyNote: "(optional collab/partner note)",
+    company: "Placeholder Company (in collab. with Partner)",
+    companyUrl: "https://example.com",
     dateRange: "20XX - 20XX",
-    description: "Placeholder description.",
-    tags: [],
+    description: [
+      "Developed responsive frontend interfaces with modern component architecture.",
+      "Researched and implemented prototype hardware/software integrations for engineering coursework."
+    ],
+    tags: ["Python", "JavaScript"],
   },
 ];
