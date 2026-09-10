@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
                   className={`font-mono text-xs sm:text-sm font-bold tracking-wider px-3 py-1.5 sm:px-3.5 sm:py-2 transition-all duration-150 select-none ${
                     isActive
                       ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 brutal-shadow-sm"
-                      : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:white hover:bg-zinc-200/70 dark:hover:bg-zinc-800/70"
+                      : "text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 hover:bg-zinc-200/70 dark:hover:text-white dark:hover:bg-zinc-800"
                   }`}
                 >
                   {item.label}
@@ -184,7 +184,7 @@ export const Navbar: React.FC = () => {
                     } ${
                       isActive
                         ? "bg-zinc-900 text-white dark:bg-white dark:text-zinc-950 brutal-shadow-sm"
-                        : "bg-white dark:bg-[#18181b] text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:translate-x-1"
+                        : "bg-white dark:bg-[#18181b] text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 hover:text-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-white hover:translate-x-1"
                     }`}
                   >
                     {item.label}

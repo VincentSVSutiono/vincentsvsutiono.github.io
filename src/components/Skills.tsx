@@ -11,15 +11,14 @@ export const Skills: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-mono text-zinc-950 dark:text-zinc-50 uppercase inline-block">
-            MY{" "}
-            <span className="relative inline-block">
-              TECH
-              <span className="absolute -bottom-1.5 left-0 right-0 h-1 sm:h-1.5 bg-zinc-900 dark:bg-amber-400"></span>
-            </span>{" "}
-            STACK
+          <span className="font-mono text-xs uppercase px-3 py-1 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-bold tracking-wider inline-block mb-3 brutal-shadow-sm border border-zinc-900 dark:border-zinc-100">
+            EXPERTISE
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-mono text-zinc-950 dark:text-zinc-50 uppercase">
+            TECH STACK
           </h2>
-          <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 mt-4 max-w-xl mx-auto">
+          <div className="h-1 w-12 sm:h-1.5 sm:w-16 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
+          <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
             Technologies, frameworks, and tools I use to build robust software
             and hardware systems.
           </p>

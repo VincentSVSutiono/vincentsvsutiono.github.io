@@ -19,7 +19,7 @@ export const profile: Profile = {
   name: "Vincent Sutiono",
   bio: "An undergraduate majoring in Computer Engineering at Multimedia Nusantara University, I am passionate about leveraging technology to address real-world challenges. Throughout my academic journey, I have gained hands-on experience in areas such as web development, electronics and machine learning, continually pushing myself to learn and grow. I enjoy transforming ideas into practical solutions and collaborating with others to bring projects to life. My goal is to apply my skills in full-stack development and intelligent systems to develop innovative and effective technological solutions.",
   location: "Tangerang, Indonesia",
-  avatarUrl: "./Me.jpg",
+  avatarUrl: "./me.webp",
   resumeUrl: "./CV.pdf",
   terminalLines: [
     "Computer Engineering undergraduate @ Multimedia Nusantara University",

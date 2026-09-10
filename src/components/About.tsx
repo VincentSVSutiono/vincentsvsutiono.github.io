@@ -13,12 +13,14 @@ export const About: React.FC = () => {
       className="scroll-mt-16 pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto"
     >
       {/* ── PART A: ABOUT ME BLOCK ────────────────────────────────────────── */}
-      <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase">
-          About Me
+      <div className="text-center mb-12 sm:mb-16">
+        <span className="font-mono text-xs uppercase px-3 py-1 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-bold tracking-wider inline-block mb-3 brutal-shadow-sm border border-zinc-900 dark:border-zinc-100">
+          WHO AM I
+        </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-mono text-zinc-950 dark:text-zinc-50 uppercase">
+          ABOUT ME
         </h2>
-        {/* Underline bar: gold yellow in dark mode */}
-        <div className="h-1 w-12 sm:h-1.5 sm:w-14 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5" />
+        <div className="h-1 w-12 sm:h-1.5 sm:w-16 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
@@ -38,7 +40,7 @@ export const About: React.FC = () => {
           <div className="w-full max-w-[16rem] sm:max-w-[18rem] bg-white dark:bg-[#14151a] brutal-border brutal-shadow-lg p-2.5 sm:p-3">
             <div className="relative aspect-[4/5] w-full overflow-hidden brutal-border-sm bg-zinc-100 dark:bg-zinc-800">
               <img
-                src={profile.avatarUrl || "./Me.jpg"}
+                src={profile.avatarUrl || "./me.webp"}
                 alt={profile.name}
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
@@ -50,17 +52,14 @@ export const About: React.FC = () => {
 
       {/* ── PART B: EDUCATION & GROWTH SUB-BLOCK ─────────────────────────── */}
       <div className="mt-14 sm:mt-18 pt-8 border-t-2 border-dashed border-zinc-300 dark:border-zinc-800">
-        <div className="text-center mb-8 sm:mb-12">
-          <div className="inline-block mb-2">
-            <span className="font-mono text-[10px] sm:text-xs font-bold uppercase tracking-widest px-2.5 py-0.5 bg-zinc-900 dark:bg-zinc-800 text-white dark:text-zinc-200 border border-zinc-900 dark:border-zinc-700">
-              [ My Journey ]
-            </span>
-          </div>
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 uppercase">
-            Education &amp; Growth
+        <div className="text-center mb-12 sm:mb-16">
+          <span className="font-mono text-xs uppercase px-3 py-1 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-bold tracking-wider inline-block mb-3 brutal-shadow-sm border border-zinc-900 dark:border-zinc-100">
+            MY JOURNEY
+          </span>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight font-mono text-zinc-950 dark:text-zinc-50 uppercase">
+            EDUCATION &amp; GROWTH
           </h3>
-          {/* Underline bar: gold yellow in dark mode */}
-          <div className="h-1 w-12 sm:h-1.5 sm:w-14 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
+          <div className="h-1 w-12 sm:h-1.5 sm:w-16 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
           <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
             Academic foundation &amp; continuous learning — bridging computer
             engineering theory with real-world systems.

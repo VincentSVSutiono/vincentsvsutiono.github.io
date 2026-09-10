@@ -69,7 +69,9 @@ export const Contact: React.FC = () => {
           </h2>
           <div className="h-1 w-12 sm:h-1.5 sm:w-16 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
           <p className="font-mono text-xs sm:text-sm font-semibold text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
-            I'm currently open to new opportunities and collaborations. Whether you have a question, a project in mind, or just want to connect, feel free to reach out!
+            I'm currently open to new opportunities and collaborations. Whether
+            you have a question, a project in mind, or just want to connect,
+            feel free to reach out!
           </p>
         </div>
 
@@ -127,8 +129,14 @@ export const Contact: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleCopy}
-                    aria-label={copied ? "Email address copied" : "Copy email address to clipboard"}
-                    title={copied ? "Copied to clipboard!" : "Copy email address"}
+                    aria-label={
+                      copied
+                        ? "Email address copied"
+                        : "Copy email address to clipboard"
+                    }
+                    title={
+                      copied ? "Copied to clipboard!" : "Copy email address"
+                    }
                     className="w-8 h-8 sm:w-8.5 sm:h-8.5 border border-zinc-900 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700 brutal-shadow-sm transition-transform active:scale-95 flex items-center justify-center cursor-pointer"
                   >
                     {copied ? (
@@ -159,8 +167,10 @@ export const Contact: React.FC = () => {
                   title="Visit GitHub Profile"
                 >
                   <GithubIcon className="w-4 h-4 text-zinc-800 dark:text-zinc-200" />
-                  <span className="gold-hover-link">
-                    {profile.links.github.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
+                  <span className="gold-hover-link font-medium">
+                    {profile.links.github
+                      .replace(/^https?:\/\/(www\.)?/, "")
+                      .replace(/\/$/, "")}
                   </span>
                 </a>
               )}
@@ -174,8 +184,10 @@ export const Contact: React.FC = () => {
                   title="Visit LinkedIn Profile"
                 >
                   <LinkedinIcon className="w-4 h-4 text-[#0a66c2] dark:text-[#38bdf8]" />
-                  <span className="gold-hover-link">
-                    {profile.links.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
+                  <span className="gold-hover-link font-medium">
+                    {profile.links.linkedin
+                      .replace(/^https?:\/\/(www\.)?/, "")
+                      .replace(/\/$/, "")}
                   </span>
                 </a>
               )}

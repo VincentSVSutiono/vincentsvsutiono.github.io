@@ -1,35 +1,131 @@
-// PLACEHOLDER CONTENT — replace with your real projects.
-// Renders as cards, matching the reference's Featured Projects section.
-// Add/remove entries freely; the grid/layout must adapt to however many
-// projects exist here — see AGENTS.md §1 (don't force-fit to the
-// reference's example count of 3).
+// Personal projects content — drives Section 6 (Projects).
+// Add/remove entries freely; the grid and modal adapt dynamically.
 
 export interface Project {
   id: string; // unique, used for React keys — e.g. "proj-1"
-  name: string;
-  description: string;
-  image: string; // path or URL to a screenshot/thumbnail
-  liveUrl?: string; // deployed/live link — omit if none
-  githubUrl?: string; // source code link — omit if private/none
-  tags: string[]; // tech stack chips, e.g. ["Next.js", "TypeScript", "Vercel"]
-  featured?: boolean; // optional: use to highlight top projects if you have many
+  name: string; // project title
+  subtitle: string; // concise category / functional summary
+  thumbnail: string; // main card preview image path
+  dateRange: string; // e.g. "May 2026 - Now (Ongoing)" or "2024"
+  role: string; // e.g. "Full-Stack Developer"
+  type: string; // e.g. "Individual Project" or "University Group Project"
+  description: string; // full narrative breakdown (paragraphs separated by \n\n)
+  tags: string[]; // tech stack chips
+  images: string[]; // gallery screenshots / diagrams for the modal
+  githubUrl?: string; // optional repository link
+  liveUrl?: string; // optional live demo link
+  docsUrl?: string; // optional documentation / PDF link
 }
 
 export const projects: Project[] = [
   {
     id: "proj-1",
-    name: "Placeholder Project One",
-    description: "One or two sentences describing the problem this project solves and what makes it notable.",
-    image: "/images/projects/placeholder-1.png",
-    liveUrl: undefined,
+    name: "H&S Rajawali Motor Website",
+    subtitle:
+      "Digital Storefront & WhatsApp Inquiry Catalog for Automotive Accessories",
+    thumbnail: "./projects/hs_motor/images/thumbnail.webp",
+    dateRange: "May 2026 - Now (Ongoing)",
+    role: "Full-Stack Developer",
+    type: "Individual Project",
+    description: `This project aims to help my parents' local car accessories shop establish a digital presence by developing an online product catalog website. The shop has traditionally relied on walk-in customers and word of mouth, which limits its ability to reach new customers. By making the business accessible online, the website is intended to help attract a wider audience, improve customer convenience, and support future sales growth.
+
+The website is currently being developed using the PERN stack and has progressed from the design phase into development, with the shop's product catalog already collected and organized. It will include a public product catalog with search and category filtering, an admin panel that allows the owner to manage inventory independently, and a WhatsApp-integrated inquiry system that generates pre-filled messages based on the customer's selected product, brand, and car model.
+
+Once completed, the website will serve as a digital storefront that customers can browse at any time. By providing product information online and streamlining customer inquiries through WhatsApp, the project intends to make it easier for customers to find what they need and contact the shop, ultimately helping the business expand beyond its traditional reliance on foot traffic.`,
+    tags: [
+      "PostgreSQL",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "PERN Stack",
+      "WhatsApp API",
+    ],
+    images: [
+      "./projects/hs_motor/images/1.webp",
+      "./projects/hs_motor/images/2.webp",
+      "./projects/hs_motor/images/3.webp",
+      "./projects/hs_motor/images/4.webp",
+    ],
     githubUrl: undefined,
-    tags: ["Tech One", "Tech Two", "Tech Three"],
+    liveUrl: "https://hs-motor.vercel.app",
+    docsUrl: undefined,
   },
   {
     id: "proj-2",
-    name: "Placeholder Project Two",
-    description: "Placeholder description.",
-    image: "/images/projects/placeholder-2.png",
-    tags: ["Tech One", "Tech Two"],
+    name: "Thyroid Cancer Tumor Segmentation",
+    subtitle:
+      "Deep Learning Pathology Image Segmentation for Oncology Diagnosis",
+    thumbnail: "./projects/tumor_segmentation/images/thumbnail.webp",
+    dateRange: "August 2025 - January 2026",
+    role: "AI Engineer",
+    type: "Bachelor Thesis Final Project",
+    description: `Diagnosing certain aggressive variants of thyroid cancer involves several steps, including identifying tumor regions and measuring specific characteristics within them. Much of this process is performed manually by pathologists, making it time-consuming and prone to differences in interpretation. This project focused on automating the first stage of that workflow by developing a deep learning model that can accurately separate tumor tissue from healthy tissue in digital pathology images. The model was trained using expert-annotated pathology slides, allowing it to learn the visual differences between tumor and non-tumor tissue. Beyond the model itself, the project established a complete workflow for processing pathology images and serves as a building block for future research into a more objective and automated thyroid cancer assessment.
+
+Working on this project also gave me experience in tackling a problem outside of my usual technical field. Collaborating with medical experts and learning about their workflow showed me that building effective AI solutions requires understanding of the real-world problem, not just the technology behind it. Breaking down medical process into smaller steps helped me design a solution that could contribute to a larger system, while reinforcing the importance of working closely with domain experts when developing software for specialized fields.`,
+    tags: [
+      "Python",
+      "PyTorch",
+      "Deep Learning",
+      "Computer Vision",
+      "Digital Pathology",
+      "Medical AI",
+    ],
+    images: ["./projects/tumor_segmentation/images/1.webp"],
+    githubUrl: undefined,
+    liveUrl: undefined,
+    docsUrl: undefined,
+  },
+  {
+    id: "proj-3",
+    name: "AWBA (AC Water Bucket Alert)",
+    subtitle: "Arduino Ultrasonic Condensation Level Monitoring & Alert System",
+    thumbnail: "./projects/AWBA/images/thumbnail.webp",
+    dateRange: "May 2026",
+    role: "Embedded Systems Developer",
+    type: "Individual Project",
+    description: `My room's air conditioner drains condensation into a bucket placed on top of a cupboard, which needs to be emptied regularly to prevent it from overflowing. Because the bucket is out of sight, it was easy to forget about until it became heavy and difficult to move without spilling. As my first hands-on electronics project, I wanted to build a simple solution that could monitor the bucket and provide an early warning before it became a problem.
+
+I developed an Arduino-based water level monitoring system that uses an ultrasonic sensor to continuously track the bucket's fill level and provide visual and audible alerts as it approaches capacity. Rather than relying on a single threshold, the system uses progressive warning stages and built-in cooldown periods to reduce unnecessary alarms while still drawing attention when action is needed. This project introduced me to embedded systems, sensors, and microcontroller programming, while teaching me the importance of designing solutions for problems in everyday situations.`,
+    tags: [
+      "Arduino",
+      "C++",
+      "Ultrasonic Sensor",
+      "Hardware",
+      "Embedded Systems",
+      "IoT",
+    ],
+    images: [
+      "./projects/AWBA/images/1.webp",
+      "./projects/AWBA/images/2.webp",
+      "./projects/AWBA/images/3.webp",
+      "./projects/AWBA/images/4.webp",
+    ],
+    githubUrl: undefined,
+    liveUrl: undefined,
+    docsUrl: "./projects/AWBA/AWBA.pdf",
+  },
+  {
+    id: "proj-4",
+    name: "CLIP (Carry List Item Partner)",
+    subtitle: "RFID & Bluetooth Pervasive Item Tracking Web Interface",
+    thumbnail: "./projects/CLIP/images/thumbnail.webp",
+    dateRange: "2024",
+    role: "Front-end Developer",
+    type: "University Group Project",
+    description: `CLIP is an embedded systems and mobile pervasive project designed to help users keep track of their belongings. The system uses RFID and Bluetooth to connect physical items with a web application, allowing users to organize and monitor them more easily.
+
+In this project, I am responsible for developing the frontend web interface using React and Chakra UI to create a user-friendly experience. I also collaborate with the design team to translate UI/UX designs into functional components.`,
+    tags: [
+      "React.js",
+      "Chakra UI",
+      "TypeScript",
+      "RFID",
+      "Bluetooth",
+      "Pervasive Systems",
+    ],
+    images: ["./projects/CLIP/images/1.webp", "./projects/CLIP/images/2.webp"],
+    githubUrl: "https://github.com/CLIP-Carry-List-Item-Partner",
+    liveUrl: undefined,
+    docsUrl: undefined,
   },
 ];
