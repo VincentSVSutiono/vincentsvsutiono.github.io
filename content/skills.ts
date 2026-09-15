@@ -28,14 +28,19 @@ export const skillCategories: SkillCategory[] = [
       { name: "JavaScript", icon: "javascript" },
       { name: "TypeScript", icon: "typescript" },
       { name: "Python", icon: "python" },
+      { name: "C / C++", icon: "cpp" }, // Used in Arduino firmware
     ],
   },
   {
     id: "frontend",
     label: "Frontend",
     skills: [
-      { name: "React.js", icon: "react" },
+      { name: "HTML", icon: "html5" },
+      { name: "CSS", icon: "css3" },
+      { name: "React", icon: "react" },
       { name: "TailwindCSS", icon: "tailwindcss" },
+      { name: "Vite", icon: "vite" },
+      { name: "Tanstack React Query", icon: "tanstack-query" },
     ],
   },
   {
@@ -43,7 +48,51 @@ export const skillCategories: SkillCategory[] = [
     label: "Backend",
     skills: [
       { name: "Node.js", icon: "nodedotjs" },
+      { name: "Express.js", icon: "express" },
+      { name: "Prisma", icon: "prisma" },
     ],
   },
-  // Add more categories as needed, e.g. "Databases", "Tools", "Cloud".
+  {
+    id: "database",
+    label: "Database",
+    skills: [
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "MySQL", icon: "mysql" },
+    ],
+  },
+  {
+    id: "aiml",
+    label: "AI & Machine Learning",
+    skills: [
+      { name: "PyTorch", icon: "pytorch" },
+      { name: "TensorFlow", icon: "tensorflow" },
+    ],
+  },
+  {
+    id: "hardware",
+    label: "Hardware & IoT",
+    skills: [
+      { name: "Arduino", icon: "arduino" },
+      { name: "Sensors & Actuators", icon: "sensor" },
+    ],
+  },
+  {
+    id: "tools",
+    label: "Developer Tools",
+    skills: [
+      { name: "Git", icon: "git" },
+      { name: "GitHub", icon: "github" },
+      { name: "Postman", icon: "postman" },
+      { name: "Mockoon", icon: "mockoon" },
+    ],
+  },
+  {
+    id: "agentic",
+    label: "Agentic Tools",
+    skills: [
+      { name: "Antigravity", icon: "antigravity" },
+      { name: "OpenCode", icon: "opencode" },
+      { name: "OpenRouter", icon: "openrouter" },
+    ],
+  },
 ];

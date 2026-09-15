@@ -29,7 +29,7 @@ export const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <div
               key={category.id}
-              className={`flex flex-col sm:flex-row sm:items-start gap-3.5 sm:gap-6 pb-6 sm:pb-8 ${
+              className={`flex flex-col sm:flex-row sm:items-start gap-3.5 sm:gap-8 pb-6 sm:pb-8 ${
                 index !== skillCategories.length - 1
                   ? "border-b border-dashed border-zinc-300 dark:border-zinc-800"
                   : ""
