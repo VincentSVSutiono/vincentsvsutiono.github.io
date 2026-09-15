@@ -103,9 +103,6 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-emerald-500"></span>
               </span>
-              <span className="text-xs sm:text-sm font-mono text-emerald-400 tracking-wide font-medium hidden xs:inline-block">
-                SYS_ONLINE
-              </span>
             </div>
           </div>
 
@@ -113,13 +110,17 @@ export const Hero: React.FC = () => {
           <div className="p-5 sm:p-7 md:p-8 space-y-4 sm:space-y-5 md:space-y-6">
             {/* Shell Command Simulation */}
             <div className="font-mono text-[clamp(9px,2.6vw,14px)] sm:text-base text-zinc-500 dark:text-zinc-400 flex items-center gap-1.5 whitespace-nowrap w-full select-none overflow-hidden">
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+              <span className="text-zinc-800 dark:text-amber-400 font-bold">
                 visitor@portfolio
               </span>
               <span>:</span>
-              <span className="text-blue-600 dark:text-blue-400">~</span>
+              <span className="text-zinc-600 dark:text-zinc-400 font-medium">
+                ~
+              </span>
               <span>$ ./welcome.sh</span>
-              <span className="hidden min-[380px]:inline">--execute</span>
+              <span className="hidden min-[380px]:inline text-zinc-400 dark:text-zinc-500">
+                --execute
+              </span>
             </div>
 
             {/* Main Greeting & Name */}
@@ -129,21 +130,19 @@ export const Hero: React.FC = () => {
               </p>
               <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50">
                 {profile.name}
-                <span className="text-emerald-600 dark:text-emerald-400">
-                  .
-                </span>
+                <span className="text-zinc-950 dark:text-amber-400">.</span>
               </h1>
             </div>
 
             {/* Interactive Terminal Prompt / Rotating One-Liners */}
-            <div className="bg-zinc-950 dark:bg-black text-emerald-400 dark:text-emerald-300 p-3 sm:p-4 brutal-border brutal-shadow-sm font-mono text-xs sm:text-sm md:text-base min-h-[4rem] sm:min-h-[4.25rem] flex items-center">
+            <div className="bg-zinc-950 dark:bg-black p-3 sm:p-4 brutal-border brutal-shadow-sm font-mono text-xs sm:text-sm md:text-base min-h-[4rem] sm:min-h-[4.25rem] flex items-center">
               <div className="flex items-start gap-2 w-full">
-                <span className="text-zinc-500 dark:text-zinc-600 select-none font-bold mt-0.5">
+                <span className="text-zinc-400 dark:text-amber-400 select-none font-bold mt-0.5">
                   &gt;
                 </span>
                 <div className="text-zinc-100 dark:text-zinc-200 font-semibold leading-relaxed flex-1">
                   <span>{displayedText}</span>
-                  <span className="inline-block w-2 sm:w-2.5 h-3.5 sm:h-4 bg-emerald-400 dark:bg-emerald-300 cursor-blink ml-1 align-middle"></span>
+                  <span className="inline-block w-2 sm:w-2.5 h-3.5 sm:h-4 bg-zinc-300 dark:bg-amber-400 cursor-blink ml-1 align-middle"></span>
                 </div>
               </div>
             </div>
@@ -156,12 +155,12 @@ export const Hero: React.FC = () => {
                   href={profile.resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-5 py-2.5 sm:px-6 sm:py-3 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-sm sm:text-base font-bold brutal-btn uppercase tracking-wider group"
+                  className="inline-flex items-center gap-2.5 px-5 py-2.5 sm:px-6 sm:py-3 bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 font-mono text-sm sm:text-base font-bold brutal-btn uppercase tracking-wider group hover:bg-zinc-800 dark:hover:bg-amber-400 dark:hover:text-zinc-950 transition-colors"
                   id="hero-view-cv-btn"
                 >
-                  <FileText className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-emerald-400 dark:text-emerald-600 transition-transform group-hover:scale-110" />
+                  <FileText className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-zinc-300 dark:text-zinc-700 group-hover:text-white dark:group-hover:text-zinc-950 transition-colors transition-transform group-hover:scale-110" />
                   <span>View CV</span>
-                  <ArrowUpRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-zinc-400 dark:text-zinc-600 group-hover:text-white dark:group-hover:text-zinc-950 transition-colors" />
+                  <ArrowUpRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-zinc-400 dark:text-zinc-500 group-hover:text-white dark:group-hover:text-zinc-950 transition-colors" />
                 </a>
               )}
 
@@ -174,11 +173,11 @@ export const Hero: React.FC = () => {
                 {profile.links.email && (
                   <a
                     href={`mailto:${profile.links.email}`}
-                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:hover:border-amber-400 transition-colors"
                     aria-label="Send Email to Vincent Sutiono"
                     id="hero-social-email"
                   >
-                    <Mail className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 group-hover:text-emerald-600 dark:group-hover:text-emerald-400" />
+                    <Mail className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-950 dark:group-hover:text-amber-400" />
                   </a>
                 )}
 
@@ -188,11 +187,11 @@ export const Hero: React.FC = () => {
                     href={profile.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:hover:border-amber-400 transition-colors"
                     aria-label="Visit GitHub Profile"
                     id="hero-social-github"
                   >
-                    <GithubIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 group-hover:text-emerald-600 dark:group-hover:text-emerald-400" />
+                    <GithubIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-950 dark:group-hover:text-amber-400" />
                   </a>
                 )}
 
@@ -202,11 +201,11 @@ export const Hero: React.FC = () => {
                     href={profile.links.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group"
+                    className="w-10 h-10 sm:w-11 sm:h-11 bg-white dark:bg-[#18181b] text-zinc-900 dark:text-zinc-100 brutal-btn flex items-center justify-center group hover:bg-zinc-100 dark:hover:bg-zinc-800 dark:hover:border-amber-400 transition-colors"
                     aria-label="Visit LinkedIn Profile"
                     id="hero-social-linkedin"
                   >
-                    <LinkedinIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 group-hover:text-emerald-600 dark:group-hover:text-emerald-400" />
+                    <LinkedinIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 transition-transform group-hover:scale-110 text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-950 dark:group-hover:text-amber-400" />
                   </a>
                 )}
               </div>
@@ -216,7 +215,9 @@ export const Hero: React.FC = () => {
             <div className="pt-3.5 border-t border-zinc-200 dark:border-zinc-800 flex flex-wrap items-center justify-between text-xs sm:text-sm md:text-base font-mono text-zinc-500 dark:text-zinc-400 gap-2">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                <span className="font-semibold">STATUS: 200 OK</span>
+                <span className="font-semibold text-zinc-700 dark:text-zinc-300">
+                  STATUS: 200 OK
+                </span>
               </div>
               {profile.location && (
                 <div className="text-zinc-600 dark:text-zinc-300 font-medium flex items-center gap-1.5 sm:gap-2">
