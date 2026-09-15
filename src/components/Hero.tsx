@@ -79,7 +79,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-16 sm:pt-18 pb-2 sm:pb-3"
+      className="min-h-[calc(100svh-3.5rem)] sm:min-h-screen flex items-start sm:items-center justify-center px-4 sm:px-6 pt-20 sm:pt-14 pb-8 sm:pb-4"
     >
       <div className="w-full max-w-3xl mx-auto">
         {/* Terminal Window Container */}
