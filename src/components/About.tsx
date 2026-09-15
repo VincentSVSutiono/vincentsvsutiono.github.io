@@ -25,7 +25,7 @@ export const About: React.FC = () => {
         <div className="h-1 w-12 sm:h-1.5 sm:w-16 bg-zinc-900 dark:bg-amber-400 mx-auto mt-2.5 mb-3" />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         {/* Left Column: Bio Narrative Card (Pure Bio Only) */}
         <div className="lg:col-span-7 flex flex-col justify-center bg-white dark:bg-[#14151a] brutal-border brutal-shadow-lg p-5 sm:p-7 md:p-8">
           <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base leading-relaxed font-medium text-justify text-zinc-700 dark:text-zinc-300">
@@ -38,7 +38,7 @@ export const About: React.FC = () => {
         </div>
 
         {/* Right Column: Brutalist Portrait Photo Frame (Natural Color, No Grayscale) */}
-        <div className="lg:col-span-5 flex justify-center">
+        <div className="lg:col-span-5 flex justify-center items-center">
           <div className="w-full max-w-[16rem] sm:max-w-[18rem] bg-white dark:bg-[#14151a] brutal-border brutal-shadow-lg p-2.5 sm:p-3">
             <div className="relative aspect-[4/5] w-full overflow-hidden brutal-border-sm bg-zinc-100 dark:bg-zinc-800">
               <img
