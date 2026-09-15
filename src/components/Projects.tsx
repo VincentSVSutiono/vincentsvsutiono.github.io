@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 border-t-2 border-zinc-900 dark:border-zinc-800 transition-colors duration-200 scroll-mt-16"
+      className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-t-2 border-zinc-900 dark:border-zinc-800 transition-colors duration-200 scroll-mt-16"
     >
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
