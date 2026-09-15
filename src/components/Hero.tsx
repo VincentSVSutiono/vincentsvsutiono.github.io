@@ -79,9 +79,9 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="min-h-[calc(100svh-3.5rem)] sm:min-h-screen flex items-start sm:items-center justify-center px-4 sm:px-6 pt-20 sm:pt-14 pb-8 sm:pb-4"
+      className="min-h-[100dvh] flex items-center justify-center px-4 sm:px-6"
     >
-      <div className="w-full max-w-3xl mx-auto">
+      <div className="w-full max-w-3xl mx-auto lg:pt-14 lg:pb-3">
         {/* Terminal Window Container */}
         <div className="bg-white dark:bg-[#14151a] brutal-border brutal-shadow-lg overflow-hidden transition-all duration-300">
           {/* Terminal Window Header Bar */}
