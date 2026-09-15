@@ -17,15 +17,19 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Vincent Sutiono",
-  bio: "An undergraduate majoring in Computer Engineering at Multimedia Nusantara University, I am passionate about leveraging technology to address real-world challenges. Throughout my academic journey, I have gained hands-on experience in areas such as web development, electronics and machine learning, continually pushing myself to learn and grow. I enjoy transforming ideas into practical solutions and collaborating with others to bring projects to life. My goal is to apply my skills in full-stack development and intelligent systems to develop innovative and effective technological solutions.",
+  bio: `Graduated with a degree in Computer Engineering from Multimedia Nusantara University, with a strong focus on bridging the gap between hardware systems and modern software architecture.
+
+Throughout my academic and project journey, I have built hands-on expertise spanning full-stack web engineering, microcontroller interfacing, and applied machine learning. I thrive on translating theoretical principles into robust, production-ready solutions.
+
+Passionate about continuous learning and collaborative engineering, my objective is to deliver reliable, high-performance web applications and intelligent systems that solve tangible, real-world problems.`,
   location: "Tangerang, Indonesia",
   avatarUrl: "./me.webp",
   resumeUrl: "./CV.pdf",
   terminalLines: [
-    "Computer Engineering undergraduate @ Multimedia Nusantara University",
+    "Computer Engineering Graduate @ Multimedia Nusantara University",
     "Passionate about web development, electronics & machine learning",
     "Building innovative full-stack & intelligent system solutions",
-    "Transforming ideas into practical, real-world technology"
+    "Transforming ideas into practical, real-world technology",
   ],
   links: {
     email: "vincentsvsutiono@gmail.com",
@@ -33,4 +37,3 @@ export const profile: Profile = {
     linkedin: "https://www.linkedin.com/in/vincent-sutiono/",
   },
 };
-

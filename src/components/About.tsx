@@ -6,6 +6,8 @@ import { education } from "../../content/education";
 export const About: React.FC = () => {
   // Split bio by double linebreaks if multiple paragraphs exist
   const bioParagraphs = profile.bio.split("\n\n");
+  // Render newest first (last item in content/education.ts appears at the top)
+  const displayEducation = [...education].reverse();
 
   return (
     <section
@@ -73,7 +75,7 @@ export const About: React.FC = () => {
 
           {/* Dynamic Timeline Entries */}
           <div className="space-y-6 sm:space-y-8">
-            {education.map((item, index) => {
+            {displayEducation.map((item, index) => {
               const hasUrl = Boolean(item.institutionUrl);
               const isFirst = index === 0;
 

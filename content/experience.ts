@@ -12,37 +12,43 @@
 export interface ExperienceEntry {
   id: string; // unique, used for React keys — e.g. "exp-1"
   role: string; // e.g. "Full-Stack Developer (Contract)"
-  company: string; // e.g. "Company Name" (can include note directly if needed)
+  company?: string; // optional: e.g. "Company Name" or omit for independent/freelance roles
   companyUrl?: string; // if the role/company should link out
   dateRange: string; // e.g. "2026 April - Present"
   description: string[]; // bullet points of responsibilities and impact
   tags?: string[]; // tools/tech used, shown as chips — omit or leave empty if none
 }
 
-// Ordered newest-first (matches the reference).
+// Ordered oldest-first (chronological).
+// The UI component automatically reverses this array so that the newest entry (at the end of the array) renders at the top of the timeline.
 export const experience: ExperienceEntry[] = [
   {
     id: "exp-1",
-    role: "Placeholder Role One",
-    company: "Placeholder Company",
-    dateRange: "20XX - Present",
+    role: "Frontend Developer (Internship)",
+    company: "Smplhr",
+    companyUrl: "https://www.smplhr.com",
+    dateRange: "February 2025 - June 2025",
     description: [
-      "Engineered full-stack features and integrated intelligent system modules to improve workflow efficiency.",
-      "Collaborated across cross-functional teams to design, test, and deploy robust web applications.",
-      "Optimized system performance, code quality, and maintainability across core services."
+      "Collaborated with the design team to translate UI/UX designs into functional and responsive components",
+      "Integrated RESTful APIs to fetch and display dynamic data, ensuring seamless communication between frontend and backend systems",
     ],
-    tags: ["TypeScript", "React.js", "Node.js", "TailwindCSS"],
+    tags: ["React", "JavaScript", "Tailwind CSS", "Mockoon", "Tanstack Query"],
   },
   {
     id: "exp-2",
-    role: "Placeholder Role Two",
-    company: "Placeholder Company (in collab. with Partner)",
-    companyUrl: "https://example.com",
-    dateRange: "20XX - 20XX",
+    role: "AI Engineer (Freelance)",
+    dateRange: "2026",
     description: [
-      "Developed responsive frontend interfaces with modern component architecture.",
-      "Researched and implemented prototype hardware/software integrations for engineering coursework."
+      "Designed and trained deep learning classification pipelines utilizing CNN and Vision Transformer architectures to accurately distinguish benign from malignant prostate tissue.",
+      "Engineered data preprocessing and augmentation workflows on high-resolution histopathology imagery to standardize tissue patches and improve model generalization.",
+      "Achieved 96%–97% accuracy and sensitivity with 98%–99% specificity, ensuring high diagnostic reliability and minimal false negative rates for clinical decision support.",
     ],
-    tags: ["Python", "JavaScript"],
+    tags: [
+      "Python",
+      "Deep Learning",
+      "CNN",
+      "Transformers",
+      "Digital Pathology",
+    ],
   },
 ];

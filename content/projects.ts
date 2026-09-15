@@ -17,37 +17,24 @@ export interface Project {
   docsUrl?: string; // optional documentation / PDF link
 }
 
+// Ordered oldest-first (chronological).
+// The UI component automatically reverses this array so that the newest entry (at the end of the array) renders as the first card in the grid.
 export const projects: Project[] = [
   {
     id: "proj-1",
-    name: "H&S Rajawali Motor Website",
-    subtitle:
-      "Digital Storefront & WhatsApp Inquiry Catalog for Automotive Accessories",
-    thumbnail: "./projects/hs_motor/images/thumbnail.webp",
-    dateRange: "May 2026 - Now (Ongoing)",
-    role: "Full-Stack Developer",
-    type: "Individual Project",
-    description: `This project aims to help my parents' local car accessories shop establish a digital presence by developing an online product catalog website. The shop has traditionally relied on walk-in customers and word of mouth, which limits its ability to reach new customers. By making the business accessible online, the website is intended to help attract a wider audience, improve customer convenience, and support future sales growth.
+    name: "CLIP (Carry List Item Partner)",
+    subtitle: "RFID & Bluetooth Pervasive Item Tracking Web Interface",
+    thumbnail: "./projects/CLIP/images/thumbnail.webp",
+    dateRange: "2024",
+    role: "Front-end Developer",
+    type: "University Group Project",
+    description: `CLIP is an embedded systems and mobile pervasive project designed to help users keep track of their belongings. The system uses RFID and Bluetooth to connect physical items with a web application, allowing users to organize and monitor them more easily.
 
-The website is currently being developed using the PERN stack and has progressed from the design phase into development, with the shop's product catalog already collected and organized. It will include a public product catalog with search and category filtering, an admin panel that allows the owner to manage inventory independently, and a WhatsApp-integrated inquiry system that generates pre-filled messages based on the customer's selected product, brand, and car model.
-
-Once completed, the website will serve as a digital storefront that customers can browse at any time. By providing product information online and streamlining customer inquiries through WhatsApp, the project intends to make it easier for customers to find what they need and contact the shop, ultimately helping the business expand beyond its traditional reliance on foot traffic.`,
-    tags: [
-      "PostgreSQL",
-      "Express.js",
-      "React.js",
-      "Node.js",
-      "PERN Stack",
-      "WhatsApp API",
-    ],
-    images: [
-      "./projects/hs_motor/images/1.webp",
-      "./projects/hs_motor/images/2.webp",
-      "./projects/hs_motor/images/3.webp",
-      "./projects/hs_motor/images/4.webp",
-    ],
-    githubUrl: undefined,
-    liveUrl: "https://hs-motor.vercel.app",
+In this project, I am responsible for developing the frontend web interface using React and Chakra UI to create a user-friendly experience. I also collaborate with the design team to translate UI/UX designs into functional components.`,
+    tags: ["React.js", "Chakra UI", "Pervasive Systems"],
+    images: ["./projects/CLIP/images/1.webp", "./projects/CLIP/images/2.webp"],
+    githubUrl: "https://github.com/CLIP-Carry-List-Item-Partner",
+    liveUrl: undefined,
     docsUrl: undefined,
   },
   {
@@ -62,14 +49,7 @@ Once completed, the website will serve as a digital storefront that customers ca
     description: `Diagnosing certain aggressive variants of thyroid cancer involves several steps, including identifying tumor regions and measuring specific characteristics within them. Much of this process is performed manually by pathologists, making it time-consuming and prone to differences in interpretation. This project focused on automating the first stage of that workflow by developing a deep learning model that can accurately separate tumor tissue from healthy tissue in digital pathology images. The model was trained using expert-annotated pathology slides, allowing it to learn the visual differences between tumor and non-tumor tissue. Beyond the model itself, the project established a complete workflow for processing pathology images and serves as a building block for future research into a more objective and automated thyroid cancer assessment.
 
 Working on this project also gave me experience in tackling a problem outside of my usual technical field. Collaborating with medical experts and learning about their workflow showed me that building effective AI solutions requires understanding of the real-world problem, not just the technology behind it. Breaking down medical process into smaller steps helped me design a solution that could contribute to a larger system, while reinforcing the importance of working closely with domain experts when developing software for specialized fields.`,
-    tags: [
-      "Python",
-      "PyTorch",
-      "Deep Learning",
-      "Computer Vision",
-      "Digital Pathology",
-      "Medical AI",
-    ],
+    tags: ["Python", "Deep Learning", "Computer Vision", "Digital Pathology"],
     images: ["./projects/tumor_segmentation/images/1.webp"],
     githubUrl: undefined,
     liveUrl: undefined,
@@ -92,7 +72,6 @@ I developed an Arduino-based water level monitoring system that uses an ultrason
       "Ultrasonic Sensor",
       "Hardware",
       "Embedded Systems",
-      "IoT",
     ],
     images: [
       "./projects/AWBA/images/1.webp",
@@ -106,26 +85,36 @@ I developed an Arduino-based water level monitoring system that uses an ultrason
   },
   {
     id: "proj-4",
-    name: "CLIP (Carry List Item Partner)",
-    subtitle: "RFID & Bluetooth Pervasive Item Tracking Web Interface",
-    thumbnail: "./projects/CLIP/images/thumbnail.webp",
-    dateRange: "2024",
-    role: "Front-end Developer",
-    type: "University Group Project",
-    description: `CLIP is an embedded systems and mobile pervasive project designed to help users keep track of their belongings. The system uses RFID and Bluetooth to connect physical items with a web application, allowing users to organize and monitor them more easily.
+    name: "H&S Rajawali Motor Website",
+    subtitle:
+      "Digital Storefront & WhatsApp Inquiry Catalog for Automotive Accessories",
+    thumbnail: "./projects/hs_motor/images/thumbnail.webp",
+    dateRange: "May 2026 - August 2026",
+    role: "Full-Stack Developer",
+    type: "Individual Project",
+    description: `This project aims to help my parents' local car accessories shop establish a digital presence by developing an online product catalog website. The shop has traditionally relied on walk-in customers and word of mouth, which limits its ability to reach new customers. By making the business accessible online, the website is intended to help attract a wider audience, improve customer convenience, and support future sales growth.
 
-In this project, I am responsible for developing the frontend web interface using React and Chakra UI to create a user-friendly experience. I also collaborate with the design team to translate UI/UX designs into functional components.`,
+The website is currently being developed using the PERN stack and has progressed from the design phase into development, with the shop's product catalog already collected and organized. It will include a public product catalog with search and category filtering, an admin panel that allows the owner to manage inventory independently, and a WhatsApp-integrated inquiry system that generates pre-filled messages based on the customer's selected product, brand, and car model.
+
+Once completed, the website will serve as a digital storefront that customers can browse at any time. By providing product information online and streamlining customer inquiries through WhatsApp, the project intends to make it easier for customers to find what they need and contact the shop, ultimately helping the business expand beyond its traditional reliance on foot traffic.`,
     tags: [
+      "PostgreSQL",
+      "Express.js",
       "React.js",
-      "Chakra UI",
-      "TypeScript",
-      "RFID",
-      "Bluetooth",
-      "Pervasive Systems",
+      "Node.js",
+      "Prisma",
+      "Tanstack React Query",
+      "Tailwind CSS",
+      "Neon DB",
     ],
-    images: ["./projects/CLIP/images/1.webp", "./projects/CLIP/images/2.webp"],
-    githubUrl: "https://github.com/CLIP-Carry-List-Item-Partner",
-    liveUrl: undefined,
+    images: [
+      "./projects/hs_motor/images/1.webp",
+      "./projects/hs_motor/images/2.webp",
+      "./projects/hs_motor/images/3.webp",
+      "./projects/hs_motor/images/4.webp",
+    ],
+    githubUrl: undefined,
+    liveUrl: "https://hs-motor.vercel.app",
     docsUrl: undefined,
   },
 ];

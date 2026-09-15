@@ -3,6 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 import { experience } from "../../content/experience";
 
 export const Experience: React.FC = () => {
+  // Render newest first (last item in content/experience.ts appears at the top)
+  const displayExperience = [...experience].reverse();
+
   return (
     <section
       id="experience"
@@ -31,7 +34,7 @@ export const Experience: React.FC = () => {
 
           {/* Dynamic Experience Entries */}
           <div className="space-y-8 sm:space-y-10">
-            {experience.map((item, index) => {
+            {displayExperience.map((item, index) => {
               const isFirst = index === 0;
               const hasUrl = Boolean(item.companyUrl);
 
@@ -67,25 +70,27 @@ export const Experience: React.FC = () => {
                       </span>
                     </div>
 
-                    {/* Subheader: Company Name with Conditional Link */}
-                    <div className="font-mono text-xs sm:text-sm font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider flex items-center gap-1.5 flex-wrap">
-                      {hasUrl ? (
-                        <a
-                          href={item.companyUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 cursor-pointer"
-                          title={`Visit ${item.company}`}
-                        >
-                          <span className="gold-hover-link">
-                            {item.company}
-                          </span>
-                          <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-700 dark:text-amber-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                        </a>
-                      ) : (
-                        <span>{item.company}</span>
-                      )}
-                    </div>
+                    {/* Subheader: Company Name with Conditional Link (Optional) */}
+                    {item.company && (
+                      <div className="font-mono text-xs sm:text-sm font-semibold text-zinc-500 dark:text-zinc-400 tracking-wider flex items-center gap-1.5 flex-wrap">
+                        {hasUrl ? (
+                          <a
+                            href={item.companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center gap-1.5 text-zinc-500 dark:text-zinc-400 cursor-pointer"
+                            title={`Visit ${item.company}`}
+                          >
+                            <span className="gold-hover-link">
+                              {item.company}
+                            </span>
+                            <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-700 dark:text-amber-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                          </a>
+                        ) : (
+                          <span>{item.company}</span>
+                        )}
+                      </div>
+                    )}
 
                     {/* Divider */}
                     <div className="border-b border-zinc-200 dark:border-zinc-800 pt-1" />
@@ -99,11 +104,11 @@ export const Experience: React.FC = () => {
                             className="flex items-start gap-2.5 text-xs sm:text-sm md:text-[14.5px] text-zinc-600 dark:text-zinc-300 leading-relaxed font-medium dark:font-normal"
                           >
                             <span className="w-1.5 h-1.5 bg-zinc-800 dark:bg-amber-400 mt-2 shrink-0 rounded-none inline-block" />
-                            <span>{bullet}</span>
+                            <span className="text-justify">{bullet}</span>
                           </li>
                         ))
                       ) : (
-                        <li className="text-xs sm:text-sm md:text-[14.5px] text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                        <li className="text-xs sm:text-sm md:text-[14.5px] text-justify text-zinc-600 dark:text-zinc-300 leading-relaxed">
                           {item.description}
                         </li>
                       )}

@@ -13,35 +13,28 @@ export interface EducationEntry {
   description: string;
 }
 
-// Ordered oldest-first or newest-first — your call, just be consistent.
+// Ordered oldest-first (chronological).
+// The UI component automatically reverses this array so that the newest entry (at the end of the array) renders at the top of the timeline.
 export const education: EducationEntry[] = [
   {
     id: "edu-1",
-    title: "Undergraduate in Computer Engineering",
+    title: "Computer Engineering",
     institution: "Multimedia Nusantara University",
     institutionUrl:
       "https://www.umn.ac.id/en/universitas-multimedia-nusantara/",
-    subtitle: "Bachelor of Computer Engineering",
-    dateRange: "2022 — Present",
+    subtitle: "Bachelor of Engineering (S.T.)",
+    dateRange: "2022 — 2026",
     description:
-      "Focusing on hardware-software co-design, full-stack web architectures, electronics, and intelligent systems. Gaining comprehensive practical experience in transforming theoretical principles into deployed technological solutions.",
+      "Focusing on hardware-software co-design, full-stack web architectures, electronics, network, and intelligent systems. Gaining comprehensive practical experience in transforming theoretical principles into deployed technological solutions.",
   },
   {
     id: "edu-2",
-    title: "Self-Directed Technical Specialization",
-    institution: "Autonomous Engineering & Practical Systems",
-    subtitle: "Full-Stack Development & Machine Learning",
-    dateRange: "2022 — Present",
+    title: "Apple Developer Academy Learner",
+    institution: "Apple Developer Academy @Bali",
+    institutionUrl: "https://developeracademy.apps.binus.ac.id/bali/",
+    subtitle: "Challenge-Based Learning (Design, Coding & Professional Skills)",
+    dateRange: "March 2027 — December 2027",
     description:
-      "Dedicated to continuous deep-dive learning into modern web application stacks, automated toolchains, microcontroller interfacing, and applied machine learning models.",
-  },
-  {
-    id: "edu-3",
-    title: "Vocational School Student",
-    institution: "Vocational High School 2 Tangerang",
-    subtitle: "Computer and Network Engineering",
-    dateRange: "2019 - 2022",
-    description:
-      "Focusing on hardware-software co-design, full-stack web architectures, electronics, and intelligent systems. Gaining comprehensive practical experience in transforming theoretical principles into deployed technological solutions.",
+      "Selected for an intensive 10-month multidisciplinary development program powered by Apple and BINUS. Focused on Challenge-Based Learning (CBL) to solve real-world problems, integrating user-centered UI/UX design, iOS development, project management, and collaborative cross-functional leadership.",
   },
 ];

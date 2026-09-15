@@ -5,6 +5,8 @@ import { ProjectModal } from "./ProjectModal";
 
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  // Render newest first (last item in content/projects.ts appears at the top)
+  const displayProjects = [...projects].reverse();
 
   return (
     <section
@@ -29,7 +31,7 @@ export const Projects: React.FC = () => {
 
         {/* Dynamic Project Cards Grid (1 col mobile, 2 col tablet, 3 col desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project) => (
+          {displayProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
