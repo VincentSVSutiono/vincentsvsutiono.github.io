@@ -19,7 +19,7 @@ pnpm-debug.log*
 .env.local
 .env.*.local
 
-# Editor directories
+# Editor & OS files
 .vscode/
 .idea/
 *.suo
@@ -27,3 +27,11 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+.DS_Store
+Thumbs.db
+
+# Agent workflows, skills, and design docs
+.agents/
+AGENTS.md
+DESIGN.md
+skills-lock.json
