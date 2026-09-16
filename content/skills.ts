@@ -62,7 +62,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "aiml",
-    label: "AI & Machine Learning",
+    label: "Machine Learning",
     skills: [
       { name: "PyTorch", icon: "pytorch" },
       { name: "TensorFlow", icon: "tensorflow" },
@@ -88,7 +88,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "agentic",
-    label: "Agentic Tools",
+    label: "AI Tools",
     skills: [
       { name: "Antigravity", icon: "antigravity" },
       { name: "OpenCode", icon: "opencode" },
