@@ -92,11 +92,12 @@ I developed an Arduino-based water level monitoring system that uses an ultrason
     dateRange: "May 2026 - August 2026",
     role: "Full-Stack Developer",
     type: "Individual Project",
-    description: `This project aims to help my parents' local car accessories shop establish a digital presence by developing an online product catalog website. The shop has traditionally relied on walk-in customers and word of mouth, which limits its ability to reach new customers. By making the business accessible online, the website is intended to help attract a wider audience, improve customer convenience, and support future sales growth.
+    description: `This project aimed to help my parents' local car accessories shop establish a digital presence by developing an online product catalog website. The shop had traditionally relied on walk-in customers and word of mouth, which limited its ability to reach new customers. The website was developed to make the business more accessible online, improve customer convenience, and provide a foundation for reaching a wider audience.
 
-The website is currently being developed using the PERN stack and has progressed from the design phase into development, with the shop's product catalog already collected and organized. It will include a public product catalog with search and category filtering, an admin panel that allows the owner to manage inventory independently, and a WhatsApp-integrated inquiry system that generates pre-filled messages based on the customer's selected product, brand, and car model.
+The website was developed using the PERN stack and includes a public product catalog with search and category filtering, an admin panel that allows the owner to manage inventory independently, and a WhatsApp-integrated inquiry system that generates pre-filled messages based on the customer's selected product, brand, and car model.
 
-Once completed, the website will serve as a digital storefront that customers can browse at any time. By providing product information online and streamlining customer inquiries through WhatsApp, the project intends to make it easier for customers to find what they need and contact the shop, ultimately helping the business expand beyond its traditional reliance on foot traffic.`,
+The completed website serves as a digital storefront where customers can browse available products and access product information online. By making the catalog accessible at any time and streamlining inquiries through WhatsApp, the project provides customers with a more convenient way to find products and contact the shop, while helping the business establish an online presence beyond its traditional reliance on foot traffic.
+`,
     tags: [
       "PostgreSQL",
       "Express.js",
